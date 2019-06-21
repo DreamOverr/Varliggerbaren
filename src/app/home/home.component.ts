@@ -1,25 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
+//import { DataService } from '../data.service';
+import { MapsService} from '../maps.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  constructor(private data: DataService) { }
+  lat: number = 58.391645;
+  lng: number = 13.857145;
+  zoom: number = 18;
+
+  constructor(public map: MapsService) { }
 
   ngOnInit() {
-    this.data.getUsers().subscribe(data => {
-      this.users = data
-      console.log(this.users);
-    }
-   );
-  }
 
-  firstClick() {
-    this.data.firstClick();
   }
-
 }

@@ -1,6 +1,9 @@
-<h1>Home</h1>
-
-
+<h1>Ärad vare Hagbard!</h1>
+<div id="losning">
+<agm-map [latitude]="lat" [zoom]="zoom" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+</div>
 <ul *ngIf="users">
   <li *ngFor="let user of users.data">
     <img [src]="user.avatar">

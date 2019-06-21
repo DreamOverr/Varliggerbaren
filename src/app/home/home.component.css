@@ -19,3 +19,13 @@ img {
             border-radius: 50%;
             width: 100%;
         }
+
+agm-map{
+
+height: 600px;
+        }
+#losning{
+  margin-left: 15%;
+  width: 70%;
+
+}
